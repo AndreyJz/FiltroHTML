@@ -1,0 +1,157 @@
+body{
+    background-color: #E8D9D6;
+    margin: 0;
+}
+
+.conteiner{
+    position: relative;
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-upper{
+    display: flex;
+    flex-direction: column;
+}
+
+.booba{
+    position: relative;
+    width: 20%;
+    animation: rotar 2s backwards infinite;
+}
+
+.text{
+    z-index: 1;
+    margin-left: 6vi;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    width: 50vw;
+    height: 70vh;
+
+    h1{
+        font-size: 5rem;
+        margin: 0;
+    }
+
+    p{
+        width: 40vi;
+    }
+}
+
+.vuitton{
+    color: #fff;
+    width: max-content;
+    background-color: #271908;
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    border-radius: 40px;
+    font-size: 1.6rem;
+}
+
+.image{
+    position: fixed;
+    /* z-index: -1; */
+}
+
+.fondo{
+    position: absolute;
+    right: 0;
+    width: 35rem;
+}
+
+.alas{
+    top: 15vh;
+    position: absolute;
+    right: 2vw;
+    width: 30rem;
+}
+
+.te{
+    position: absolute;
+    right: 7vw;
+    width: 20rem;
+}
+
+.conteiner-downer{
+    display: flex;
+    gap: 0rem;
+    width: 95vw;
+}
+
+.downer-item{
+    gap: 1rem;
+    display: flex;
+    margin-left: 6vi;
+    background-color: #fff;
+    border-radius: 80px;
+    font-size: 2.5vh;
+    padding-right: 1rem;
+
+    img{
+        position: relative;
+    }
+}
+
+@keyframes rotar {
+    0%{
+        rotate: 0deg;
+    }
+    50%{
+       rotate: 30deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@media (max-width:900px) {
+    .conteiner{
+        align-items: center;
+        justify-content: center;
+        gap: 5vh;
+    }
+    .text{
+        margin-left: 0;
+        margin-top: 2vh;
+        justify-content: flex-start;
+        height: max-content;
+        text-align: center;
+        align-items: center;
+    }
+    .image{
+        top:-2vh;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        filter: blur(10px);
+    }
+
+    .fondo{
+        top: 0;
+        width: 100%;
+    }
+
+    .alas{
+        right: 0;
+        width: 100%;
+    }
+
+    .te{
+        right: 0;
+        width: 100%;
+    }
+
+    .conteiner-downer{
+        z-index: 1;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .downer-item{
+        margin-left: 0;
+    }
+}
